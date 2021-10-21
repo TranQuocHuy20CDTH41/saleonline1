@@ -13,7 +13,6 @@ require 'include/database.php';
 </head>
 
 <body>
-    <h2>DANH SÁCH HÀNG HÓA</h2>
     <table border="1">
         <?php
         $s = "select * from category";
