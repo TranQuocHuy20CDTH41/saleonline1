@@ -6,7 +6,7 @@ function getData($s)
     $xau = '';
     while ($r = $q->fetch_array()) {
         $xau .= '
-        <div class="container p-5 my-5 bg-primary text-white">
+        <div class="container-fluid p-5 my-5 bg-primary text-white">
         <h1>' . $r['category_name'] . '</h1>
         </div>
         ';
@@ -17,11 +17,9 @@ function getData($s)
         while ($r1 = $q1->fetch_array()) {
             $xau .= '
             <div class="col-sm-3">' . '<img src = "images/' . $r1['product_image'] . '"width="120px" height="120px">'
-                . '<h4>' . $r1['product_name'] . '</h4></div>';
-
-            $xau .= "----------------" . $r1['product_name'] . '
-                <img src = "images/' . $r1['product_image'] . '"width="20px" height="20px">' . '<br>';
+                . '<h4>' . $r1['product_name'] . '</h4><h4></h4><a href="#">Buy</a></div>';
         }
+        $xau .= '</div>';
     }
     return $xau;
 }
@@ -57,3 +55,4 @@ function getData($s)
 //     $con = new mysqli('localhost', 'root', '', 'testing_1');
 //     $q = $con->query($s);
 // }
+
